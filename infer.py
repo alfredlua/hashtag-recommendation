@@ -23,9 +23,9 @@ model = model.eval()
 device = "cpu"
 model = model.to(device)
 
-use_beam_search = False #@param {type:"boolean"}  
+use_beam_search = True #@param {type:"boolean"}  
 
-image = io.imread("./Images/notebook.jpg")
+image = io.imread("./Images/museum.jpg")
 pil_image = PIL.Image.fromarray(image)
 
 image = preprocess(pil_image).unsqueeze(0).to(device)
