@@ -22,7 +22,7 @@ prefix_length = 10
 
 model = ClipCaptionModel(prefix_length)
 
-# model.load_state_dict(torch.load("./coco_weights.pt", map_location=CPU)) 
+model.load_state_dict(torch.load("./app/coco_weights.pt", map_location=CPU)) 
 
 model = model.eval() 
 device = "cpu"
