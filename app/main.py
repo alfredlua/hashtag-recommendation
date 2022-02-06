@@ -3,8 +3,8 @@ from fastapi import FastAPI, File, UploadFile
 
 import clip
 import torch
-from models import ClipCaptionModel
-from caption import generate_beam, generate2
+from app.models import ClipCaptionModel
+from app.caption import generate_beam, generate2
 from transformers import GPT2Tokenizer
 
 from PIL import Image
@@ -22,7 +22,7 @@ prefix_length = 10
 
 model = ClipCaptionModel(prefix_length)
 
-model.load_state_dict(torch.load("./coco_weights.pt", map_location=CPU)) 
+# model.load_state_dict(torch.load("./coco_weights.pt", map_location=CPU)) 
 
 model = model.eval() 
 device = "cpu"

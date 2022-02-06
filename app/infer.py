@@ -1,5 +1,4 @@
 import clip
-import os
 import torch
 from models import ClipCaptionModel
 from caption import generate_beam, generate2
